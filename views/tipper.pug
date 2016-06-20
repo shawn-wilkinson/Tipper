@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  head
+    title Tip Calculator
+    link(href='/style.css', rel='stylesheet')
+  body
+    form(action="/tipper" method="POST")
+      input(type='number', name='amtCharged', value= amt)
+      select(name='tipPercent')
+        option(value='.15') 15%
+        option(value='.20') 20%
+        option(value='.25') 25%
+      input(type='submit','Calculate')
+    span=total
